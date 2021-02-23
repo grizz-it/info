@@ -16,21 +16,21 @@ class Contact implements ContactInterface
      *
      * @var string|null
      */
-    private $name;
+    private ?string $name;
 
     /**
      * Contains the URL.
      *
      * @var string|null
      */
-    private $url;
+    private ?string $url;
 
     /**
      * Contains the email.
      *
      * @var string|null
      */
-    private $email;
+    private ?string $email;
 
     /**
      * Constructor.
@@ -120,7 +120,7 @@ class Contact implements ContactInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'name' => $this->name,

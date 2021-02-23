@@ -48,7 +48,7 @@ interface ExampleInterface extends ExportableComponentInterface
      *
      * @return mixed
      */
-    public function getValue();
+    public function getValue(): mixed;
 
     /**
      * Set a literal value example.
@@ -57,7 +57,7 @@ interface ExampleInterface extends ExportableComponentInterface
      *
      * @return void
      */
-    public function setValue($value): void;
+    public function setValue(mixed $value): void;
 
     /**
      * Retrieves a URL pointing to an example.

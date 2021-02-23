@@ -16,7 +16,7 @@ class Reference implements ReferenceInterface
      *
      * @var string
      */
-    private $ref;
+    private string $ref;
 
     /**
      * Contstructor.
@@ -55,7 +55,7 @@ class Reference implements ReferenceInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return [
             '$ref' => $this->ref

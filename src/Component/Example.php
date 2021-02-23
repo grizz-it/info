@@ -16,28 +16,28 @@ class Example implements ExampleInterface
      *
      * @var string|null
      */
-    private $summary;
+    private ?string $summary;
 
     /**
      * Contains the description.
      *
      * @var string|null
      */
-    private $description;
+    private ?string $description;
 
     /**
      * Contains the value.
      *
      * @var mixed
      */
-    private $value;
+    private mixed $value;
 
     /**
      * Contains the external value.
      *
      * @var string|null
      */
-    private $externalValue;
+    private ?string $externalValue;
 
     /**
      * Constructor
@@ -50,7 +50,7 @@ class Example implements ExampleInterface
     public function __construct(
         string $summary = null,
         string $description = null,
-        $value = null,
+        mixed $value = null,
         string $externalValue = null
     ) {
         $this->summary = $summary;
@@ -108,7 +108,7 @@ class Example implements ExampleInterface
      *
      * @return mixed
      */
-    public function getValue()
+    public function getValue(): mixed
     {
         return $this->value;
     }
@@ -120,7 +120,7 @@ class Example implements ExampleInterface
      *
      * @return void
      */
-    public function setValue($value): void
+    public function setValue(mixed $value): void
     {
         $this->value = $value;
     }
@@ -152,7 +152,7 @@ class Example implements ExampleInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'summary' => $this->summary,

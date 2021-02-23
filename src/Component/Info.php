@@ -18,42 +18,42 @@ class Info implements InfoInterface
      *
      * @var string
      */
-    private $title;
+    private string $title;
 
     /**
      * Contains the description.
      *
      * @var string|null
      */
-    private $description;
+    private ?string $description;
 
     /**
      * Contains the terms of service URL.
      *
      * @var string|null
      */
-    private $termsOfService;
+    private ?string $termsOfService;
 
     /**
      * Contains the contact information.
      *
      * @var ContactInterface|null
      */
-    private $contact;
+    private ?ContactInterface $contact;
 
     /**
      * Contains the license information.
      *
      * @var LicenseInterface|null
      */
-    private $license;
+    private ?LicenseInterface $license;
 
     /**
      * Contains the version.
      *
      * @var string|null
      */
-    private $version;
+    private ?string $version;
 
     /**
      * Constructor.
@@ -218,7 +218,7 @@ class Info implements InfoInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'title' => $this->title,

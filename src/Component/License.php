@@ -16,14 +16,14 @@ class License implements LicenseInterface
      *
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
      * Contains the URL.
      *
      * @var string|null
      */
-    private $url;
+    private ?string $url;
 
     /**
      * Constructor.
@@ -86,7 +86,7 @@ class License implements LicenseInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'name' => $this->name,

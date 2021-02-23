@@ -17,21 +17,21 @@ class Tag implements TagInterface
      *
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
      * Contains the description.
      *
      * @var string|null
      */
-    private $description;
+    private ?string $description;
 
     /**
      * Contains the external documentation.
      *
      * @var ExternalDocumentationInterface|null
      */
-    private $externalDocs;
+    private ?ExternalDocumentationInterface $externalDocs;
 
     /**
      * Constructor.
@@ -122,7 +122,7 @@ class Tag implements TagInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'name' => $this->name,

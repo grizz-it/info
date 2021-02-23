@@ -16,14 +16,14 @@ class ExternalDocumentation implements ExternalDocumentationInterface
      *
      * @var string
      */
-    private $url;
+    private string $url;
 
     /**
      * Contains the description.
      *
      * @var string|null
      */
-    private $description;
+    private ?string $description;
 
     /**
      * Constructor.
@@ -88,7 +88,7 @@ class ExternalDocumentation implements ExternalDocumentationInterface
      *
      * @return array
      */
-    public function export()
+    public function export(): mixed
     {
         return array_filter([
             'url' => $this->url,
